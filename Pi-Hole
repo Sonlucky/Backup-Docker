@@ -13,7 +13,7 @@ services:
     environment:
       TZ: Argentina/ Buenos Aires
       WEBPASSWORD: -pCb_BqC
-      DNS1: 1.1.1.1
+      DNS1: 127.0.0.1
       DNS2: 1.0.0.1
       DNSSEC: 'true'
     volumes:
