@@ -1,0 +1,20 @@
+Error ssh warning
+ssh-keygen -R {RPi-IP-Address}
+----
+
+sudo passwd root
+#Change pass root
+
+logout
+
+usermod -l newname pi
+#renames the user 'pi' to 'newname'
+
+usermod -m -d /home/newname newname
+#Now logout and login back in as newname
+
+passwd
+
+sudo apt-get update
+
+sudo passwd -l root 
