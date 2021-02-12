@@ -1,0 +1,18 @@
+---
+version: "2.1"
+services:
+  duplicati:
+    image: ghcr.io/linuxserver/duplicati
+    container_name: duplicati
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Argentina/ buenos aires
+      - CLI_ARGS= #optional
+    volumes:
+      - /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Config:/config
+      - /srv/dev-disk-by-uuid-414b0eb3-c387-434b-b1b7-8d59840534cc/Backup:/backups
+      - /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Config:/source
+    ports:
+      - 8200:8200
+    restart: unless-stopped
