@@ -2,3 +2,6 @@ wget -O - https://github.com/OpenMediaVault-Plugin-Developers/installScript/raw/
 
 User: admin
 Pasa: openmediavault
+
+#Any problem
+omv-firstaid
