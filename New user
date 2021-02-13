@@ -18,3 +18,7 @@ passwd
 sudo apt-get update
 
 sudo passwd -l root 
+
+
+
+https://thepihut.com/blogs/raspberry-pi-tutorials/how-to-change-the-default-account-username-and-password
