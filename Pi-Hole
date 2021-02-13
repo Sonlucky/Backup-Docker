@@ -22,3 +22,14 @@ services:
     cap_add:
       - NET_ADMIN
     restart: unless-stopped
+
+
+Error 55 port
+ sudo systemctl stop systemd-resolved
+ systemctl daemon-reload
+ sudo systemctl stop systemd-resolved
+DNS=1.1.1.1
+FallbackDNS=1.0.0.1
+DNSStubListener=no
+sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
+
