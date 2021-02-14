@@ -28,7 +28,9 @@ Error 55 port
  sudo systemctl stop systemd-resolved
  systemctl daemon-reload
  sudo systemctl stop systemd-resolved
- 
+
+ sudo nano /etc/systemd/resolved.conf
+
 DNS=1.1.1.1
 FallbackDNS=1.0.0.1
 DNSStubListener=no
