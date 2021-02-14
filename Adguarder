@@ -28,8 +28,8 @@ services:
 
     volumes:
 
-      - /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/config/AdGuard1/workdir:/opt/adguardhome/work
+      - /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Config/AdGuard1/workdir:/opt/adguardhome/work
 
-      - /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/config/AdGuard1/confdir:/opt/adguardhome/conf
+      - /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Config/AdGuard1/confdir:/opt/adguardhome/conf
 
     restart: unless-stopped
