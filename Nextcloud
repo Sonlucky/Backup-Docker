@@ -1,1 +1,49 @@
-docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Config/nextcloud:/data –name nextcloudpi ownyourbits/nextcloudpi 127.0.0.1
+version: '2'
+
+volumes:
+
+  nextcloud:
+
+  db:
+
+services:
+
+  db:
+
+    image: yobasystems/alpine-mariadb:latest
+
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+
+    restart: always
+
+    volumes:
+
+      - /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Config/nextcloud/db:/var/lib/mysql
+
+    environment:
+
+      - MYSQL_ROOT_PASSWORD=nextpass #Change This
+
+      - MYSQL_PASSWORD=nextpass #Change This
+
+      - MYSQL_DATABASE=nextcloud
+
+      - MYSQL_USER=nextcloud
+
+  app:
+
+    image: nextcloud
+
+    ports:
+
+      - 8080:80
+
+    links:
+
+      - db
+
+    volumes:
+
+      - /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Config/nextcloud:/var/www/html #Change 'nextcloud' to your external drive volume if available
+
+    restart: always
