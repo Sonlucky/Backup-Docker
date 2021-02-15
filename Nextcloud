@@ -1,0 +1,1 @@
+docker run -d -p 4443:4443 -p 443:443 -p 80:80 -v /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Config/nextcloud:/data –name nextcloudpi ownyourbits/nextcloudpi 127.0.0.1
