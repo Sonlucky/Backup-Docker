@@ -1,0 +1,10 @@
+wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-armv7l.sh
+
+sudo /bin/bash Miniconda3-latest-Linux-armv7l.sh
+
+/srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Config/Miniconda
+
+
+Sudo nano /home/rasby/.bashrc
+
+export PATH="/srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Config/Miniconda/bin:$PATH"
