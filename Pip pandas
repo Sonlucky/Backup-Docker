@@ -1,0 +1,4 @@
+sudo apt-get install python-pandas
+
+#error libf77blas.so.3: cannot open shared file: no such file or directory
+sudo apt-get install libatlas-base-dev
