@@ -1,4 +1,8 @@
 sudo apt-get install python-pandas
-
+----
 #error libf77blas.so.3: cannot open shared file: no such file or directory
 sudo apt-get install libatlas-base-dev
+----
+#error <ipython-input-7-d05cc6ee7707> in <module>
+pip3 install -U scikit-learn
+
