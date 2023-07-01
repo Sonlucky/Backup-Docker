@@ -10,5 +10,5 @@ services:
       - VERSION=docker
     volumes:
       - /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Config/Plex/config:/config
-      - /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Media/Plex:/media
+      - /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Media:/media
     restart: unless-stopped
