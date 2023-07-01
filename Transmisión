@@ -29,7 +29,7 @@ services:
 
     volumes:
 
-      - /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Media/data:/config
+      - /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Config/Transmision:/config
 
       - /srv/dev-disk-by-uuid-3b7edb2d-8f9b-4c44-96d6-3b07d2e80b9f/Media/downloads:/downloads
 
