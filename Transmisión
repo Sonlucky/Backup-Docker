@@ -44,3 +44,15 @@ services:
       - 51413:51413/udp
 
     restart: unless-stopped
+
+Por comando:
+`sudo apt-get install transmission-daemon`
+- Detén Transmission Daemon en Raspberry Pi con el siguiente comando: `sudo service transmission-daemon stop`
+- Abre el archivo de configuración de Transmission Daemon con el siguiente comando: `sudo nano /etc/transmission-daemon/settings.json`
+- Asegura la conexión siguiendo las instrucciones en el archivo de configuración.
+- Guarda los cambios y cierra el archivo.
+- Reinicia Transmission Daemon con el siguiente comando: `sudo service transmission-daemon start`
+Busca la sección "rpc-whitelist-enabled" en el archivo de configuración y asegúrate de que esté establecido en "false". Esto desactivará la lista blanca y permitirá el acceso a cualquier dirección IP.
+busca la sección "rpc-authentication-required". Cambia el valor a "true" y agrega tu nuevo nombre de usuario y contraseña en la sección "rpc-username" y "rpc-password".
+4. Guarda los cambios y cierra el archivo.
+5. Inicia Transmission en Raspberry Pi con el siguiente comando: `sudo service transmission-daemon start`.
