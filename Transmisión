@@ -20,9 +20,9 @@ services:
 
 
 
-      - USER=username #optional
+      - USER=transmission #optional
 
-      - PASS=password #optional
+      - PASS=luckypass #optional
 
 
 
