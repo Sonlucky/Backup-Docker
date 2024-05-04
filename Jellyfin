@@ -10,7 +10,7 @@ services:
       - JELLYFIN_PublishedServerUrl=192.168.0.200 #optional
     volumes:
       - /srv/dev-disk-by-uuid-34f27a45-06cf-4883-98f9-98c6dad98a44/Config/Jellyfin:/config
-      - /srv/dev-disk-by-uuid-34f27a45-06cf-4883-98f9-98c6dad98a44/Descargas:/media
+      - /srv/dev-disk-by-uuid-34f27a45-06cf-4883-98f9-98c6dad98a44/Descargas:/data/tvshows
     ports:
       - 8096:8096
       - 8920:8920 #optional
