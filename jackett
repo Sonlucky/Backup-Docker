@@ -1,0 +1,17 @@
+---
+services:
+  jackett:
+    image: lscr.io/linuxserver/jackett:latest
+    container_name: jackett
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - AUTO_UPDATE=true #optional
+      - RUN_OPTS= #optional
+    volumes:
+      - /srv/dev-disk-by-uuid-34f27a45-06cf-4883-98f9-98c6dad98a44/Config/Jackett:/config
+      - /srv/dev-disk-by-uuid-34f27a45-06cf-4883-98f9-98c6dad98a44/Descargas:/downloads
+    ports:
+      - 9117:9117
+    restart: unless-stopped
