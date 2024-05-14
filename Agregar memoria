@@ -1,0 +1,18 @@
+swapon -a #check swap files, there was nothing
+free -h #show how much memory is used
+sudo fallocate -l 2G /swapfile #create 2Gigs of swap as a file
+sudo chmod 600 /swapfile #only root access
+sudo mkswap /swapfile #allocate swap
+sudo swapon /swapfile #enable swap
+
+#add to fstab on startup
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+
+#edit swapiness, lower values means use swap less. at 60 swap is used with ram is 40% used.
+sudo nano /etc/sysctl.conf
+
+#at end of file add
+vm.swappiness=10
+vm.vfs_cache_pressure=50
+
+reboot
