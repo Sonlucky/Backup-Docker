@@ -1,0 +1,16 @@
+---
+services:
+  bazarr:
+    image: lscr.io/linuxserver/bazarr:latest
+    container_name: bazarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /srv/dev-disk-by-uuid-34f27a45-06cf-4883-98f9-98c6dad98a44/Config/Bazarr:/config
+      - /srv/dev-disk-by-uuid-34f27a45-06cf-4883-98f9-98c6dad98a44/data/movies:/movies #optional
+      - /srv/dev-disk-by-uuid-34f27a45-06cf-4883-98f9-98c6dad98a44/data/series:/tv #optional
+    ports:
+      - 6767:6767
+    restart: unless-stopped
