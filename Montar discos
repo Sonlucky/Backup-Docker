@@ -7,3 +7,14 @@ UUID=c216fd87-b02c-4881-abdb-bc83f56e3819 /srv/dev-disk-by-uuid-c216fd87-b02c-48
 sudo systemctl daemon-reload
 
 sudo mount -a
+
+---
+sudo mkdir -p /srv/dev-disk-by-uuid-a43009fc-a89a-4a9f-b982-7c69016ddaa1/
+
+sudo nano /etc/fstab
+
+UUID=a43009fc-a89a-4a9f-b982-7c69016ddaa1 /srv/dev-disk-by-uuid-a43009fc-a89a-4a9f-b982-7c69016ddaa1 ext4 defaults 0 2
+
+sudo systemctl daemon-reload
+
+sudo mount -a
