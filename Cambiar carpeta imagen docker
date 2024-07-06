@@ -1,0 +1,12 @@
+sudo systemctl stop docker
+
+Sudo nano /etc/docker/daemon.json
+
+{
+  "data-root": "/srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/Config/Docker/Data"
+}
+
+----
+sudo systemctl start docker
+
+docker info | grep "Docker Root Dir"
