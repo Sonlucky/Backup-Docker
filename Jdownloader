@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  jdownloader:
+    image: jlesage/jdownloader-2
+    container_name: jdownloader
+    environment:
+      - USER_ID=1000
+      - GROUP_ID=1000
+      - MYJD_USER=gejrhf@gmail.com
+      - MYJD_PASSWORD=RAan3777gVee
+      - MYJD_DEVICE_NAME=Raspberry
+    ports:
+      - 5800:5800
+    volumes:
+      - /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/Config/Jdownloader/config:/config
+      - /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/data/downloads/jdownloader:/output
+    restart: always
