@@ -1,10 +1,8 @@
-sudo docker-compose -f /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/Config/Docker/Compose/bazarr/bazarr.yml up -d &&
 sudo docker-compose -f /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/Config/Docker/Compose/flaresolverr/flaresolverr.yml up -d &&
 sudo docker-compose -f /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/Config/Docker/Compose/jackett/jackett.yml up -d &&
 sudo docker-compose -f /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/Config/Docker/Compose/jellyfin/jellyfin.yml up -d &&
 sudo docker-compose -f /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/Config/Docker/Compose/PhotoPrism/PhotoPrism.yml up -d &&
 sudo docker-compose -f /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/Config/Docker/Compose/pihole/pihole.yml up -d &&
-sudo docker-compose -f /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/Config/Docker/Compose/prowlarr/prowlarr.yml up -d &&
 sudo docker-compose -f /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/Config/Docker/Compose/qBittorrent/qBittorrent.yml up -d &&
 sudo docker-compose -f /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/Config/Docker/Compose/raddar/raddar.yml up -d &&
 sudo docker-compose -f /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/Config/Docker/Compose/sonarr/sonarr.yml up -d
