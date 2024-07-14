@@ -1,0 +1,6 @@
+docker run -it --name filebot \
+  -v /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/data/downloads/Movies:/data/movies \
+  -v /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/data/downloads/Series:/data/series \
+  -v /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/data/movies:/output/movies \
+  -v /srv/dev-disk-by-uuid-c216fd87-b02c-4881-abdb-bc83f56e3819/data/series:/output/series \
+  rednoah/filebot
