@@ -1,3 +1,6 @@
+sudo ./setup_swap.sh
+
+
 swapon -a #check swap files, there was nothing
 free -h #show how much memory is used
 sudo fallocate -l 2G /swapfile #create 2Gigs of swap as a file
